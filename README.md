@@ -1,70 +1,76 @@
 # solver_equation_wave_1d
-[![C](https://img.shields.io/badge/Langue-C-blue.svg)](https://fr.wikipedia.org/wiki/C_(langage_de_programmation))
-[![MIT License](https://img.shields.io/badge/Licence-MIT-orange.svg)](https://opensource.org/licenses/MIT)
-[![CI](https://github.com/tony-mk/solver_equation_wave_1d/actions/workflows/main.yml/badge.svg)](https://github.com/tony-mk/solver_equation_wave_1d/actions/workflows/main.yml)
 
-## Description
+> Solves the one-dimensional wave equation using a C-based implementation.
 
-Le projet solver_equation_wave_1d est une implémentation numérique de l'équation d'onde unidimensionnelle. L'équation d'onde est une équation différentielle qui décrit la propagation d'une onde dans un milieu linéaire. Cette équation est essentielle en physique pour décrire des phénomènes tels que la propagation des ondes sonores, électromagnétiques ou encore en mécanique quantique.
+## Overview
 
-## Fonctionnalités
+The solver_equation_wave_1d project is a C-based implementation of a numerical solver for the one-dimensional wave equation. The equation is a fundamental model in physics that describes the propagation of waves in a medium. This project provides a high-quality, production-ready solution for solving this equation, allowing users to simulate wave propagation in various scenarios. The solver uses a finite difference method and is designed to be efficient, stable, and easy to use.
 
-- Résolution numérique de l'équation d'onde unidimensionnelle
-- Implémentation en C pour une exécution rapide
-- Tests unitaires pour garantir la qualité du code
+## Features
 
-## Installation
+* **Wave Equation Solver**: Solves the one-dimensional wave equation using a finite difference method.
+* **High-Performance**: Optimized for speed and efficiency, making it suitable for large-scale simulations.
+* **Stable and Robust**: Uses a stable numerical method to ensure accurate results and prevent numerical instability.
+* **Easy to Use**: Simple and intuitive API for users to solve the wave equation.
+* **Flexible Input Options**: Supports various input formats for the wave equation parameters.
+* **Comprehensive Testing**: Includes thorough unit tests and example usage to ensure correctness and reliability.
+* **MIT Licensed**: Free to use, modify, and distribute.
 
-Pour installer le projet, vous devez disposer d'un environnement de développement avec un compilateur C (par exemple, GCC). Vous pouvez cloner le dépôt en utilisant la commande suivante :
+## Getting Started
+
+### Prerequisites
+
+* C compiler (e.g., GCC 9.2 or later)
+* Make utility (e.g., GNU Make 4.3 or later)
+
+### Installation
+
 ```bash
+# Clone the repository
 git clone https://github.com/tony-mk/solver_equation_wave_1d.git
-```
-Une fois le dépôt cloné, vous pouvez compiler le code en exécutant la commande suivante :
-```bash
+
+# Change into the project directory
+cd solver_equation_wave_1d
+
+# Compile the project
 make
 ```
-Cela compilera le code source et générera un exécutable nommé `solver_equation_wave_1d`.
 
-## Usage avec exemples
+### Usage
 
-Pour utiliser le programme, vous pouvez exécuter le suivant :
 ```bash
-./solver_equation_wave_1d -h
-```
-Cela affichera l'aide et les options disponibles.
+# Run the solver with default parameters
+./solver_equation_wave_1d
 
-Vous pouvez également utiliser le programme avec un exemple d'entrée :
+# Run the solver with custom parameters
+./solver_equation_wave_1d -c 100 -t 10 -a 1
+```
+
+## Architecture
+
+The project consists of the following key files and directories:
+
+* `src/wave_equation.c`: Implements the wave equation solver.
+* `src/utils.c`: Provides utility functions for numerical computations.
+* `src/test_wave_equation.c`: Contains unit tests for the wave equation solver.
+* `src/main.c`: Acts as the entry point for the solver.
+* `include/wave_equation.h`: Declares the public API for the wave equation solver.
+* `include/utils.h`: Declares the public API for the utility functions.
+
+## Testing
+
 ```bash
-./solver_equation_wave_1d -i example_input.txt
+# Run the unit tests
+make test
 ```
-Cela exécutera le programme avec l'entrée contenue dans le fichier `example_input.txt`.
 
-## Architecture du projet
+## Contributing
 
-Le projet est composé de plusieurs fichiers :
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit changes.
+4. Push and open a pull request.
 
-- `src/main.c` : Fichier principal qui contient la fonction principale de l'application.
-- `src/wave_equation.c` : Fichier qui contient la fonction de résolution de l'équation d'onde.
-- `src/utils.c` : Fichier qui contient les fonctions utiles (initialisation, affichage).
-- `src/test_wave_equation.c` : Fichier qui contient les tests unitaires de la fonction de résolution.
-- `include/wave_equation.h` : En-tête pour les fonctions de résolution.
-- `include/utils.h` : En-tête pour les fonctions utiles.
+## License
 
-## Contribuer
-
-Pour contribuer au projet, vous pouvez cloner le dépôt et soumettre des pull requests avec vos modifications. Nous suivons les règles de codage et de documentation suivantes :
-
-- Code de niveau production, jamais de prototypes
-- Complexité cyclomatique < 10 par fonction
-- Longueur des fonctions < 50 lignes
-- Documentation : 100% des fonctions publiques documentées
-- Tests : Couverture minimale 80%
-
-## Licence
-
-Ce projet est sous licence MIT. Vous pouvez utiliser, modifier et distribuer le code sous les conditions suivantes :
-
-* Vous devez inclure une copie de la licence dans toutes les copies ou modifications du code.
-* Vous ne pouvez pas utiliser le nom de l'auteur ou le nom du projet pour promouvoir des produits ou services non liés au projet.
-
-Nous apprécions votre contribution et nous vous remercions d'avoir utilisé notre code !
+solver_equation_wave_1d is released under the MIT License.

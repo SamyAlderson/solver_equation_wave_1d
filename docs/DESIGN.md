@@ -1,16 +1,18 @@
 # Design Document: solver_equation_wave_1d
 
 ## Overview
-Résolution numérique de l'équation d'onde unidimensionnelle
+# solver_equation_wave_1d
+[![C](https://img.shields.io/badge/Langue-C-blue.svg)](https://fr.wikipedia.org/wiki/C_(langage_de_programmation))
+[![MIT License](https://img.shields.io/badge/Licence-MIT-or
 
 ## Architecture
-Le projet est structuré de manière modulaire pour faciliter la maintenance.
+The project follows a modular architecture for maintainability and extensibility.
 
-## Choix techniques
-- Langage: c
-- Approche: Implementation directe avec focus sur la performance
+## Technical Choices
+- Language: c
+- Approach: Direct implementation with focus on correctness and performance
 
-## Améliorations futures
-- Optimisation des performances
-- Ajout de tests supplémentaires
-- Documentation enrichie
+## Future Improvements
+- Performance optimization
+- Additional test coverage
+- Enhanced documentation
