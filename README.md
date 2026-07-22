@@ -1,76 +1,56 @@
 # solver_equation_wave_1d
+ Numerical solver for the 1D wave equation
 
-> Solves the one-dimensional wave equation using a C-based implementation.
+## What it does
+This C program solves the 1D wave equation numerically using finite differences. It's a simple implementation to help understand the basics of wave propagation. The solver takes an input file with the wave equation parameters and outputs the solution at each time step.
 
-## Overview
-
-The solver_equation_wave_1d project is a C-based implementation of a numerical solver for the one-dimensional wave equation. The equation is a fundamental model in physics that describes the propagation of waves in a medium. This project provides a high-quality, production-ready solution for solving this equation, allowing users to simulate wave propagation in various scenarios. The solver uses a finite difference method and is designed to be efficient, stable, and easy to use.
-
-## Features
-
-* **Wave Equation Solver**: Solves the one-dimensional wave equation using a finite difference method.
-* **High-Performance**: Optimized for speed and efficiency, making it suitable for large-scale simulations.
-* **Stable and Robust**: Uses a stable numerical method to ensure accurate results and prevent numerical instability.
-* **Easy to Use**: Simple and intuitive API for users to solve the wave equation.
-* **Flexible Input Options**: Supports various input formats for the wave equation parameters.
-* **Comprehensive Testing**: Includes thorough unit tests and example usage to ensure correctness and reliability.
-* **MIT Licensed**: Free to use, modify, and distribute.
-
-## Getting Started
-
-### Prerequisites
-
-* C compiler (e.g., GCC 9.2 or later)
-* Make utility (e.g., GNU Make 4.3 or later)
-
-### Installation
-
+## Install
+ Clone the repository and compile the code:
 ```bash
-# Clone the repository
-git clone https://github.com/tony-mk/solver_equation_wave_1d.git
-
-# Change into the project directory
+git clone https://github.com/SamyAlderson/solver_equation_wave_1d.git
 cd solver_equation_wave_1d
-
-# Compile the project
-make
+gcc -o solver solver.c
 ```
 
-### Usage
-
+## Usage
+ Run the solver with an input file (e.g., `input.txt`):
 ```bash
-# Run the solver with default parameters
-./solver_equation_wave_1d
-
-# Run the solver with custom parameters
-./solver_equation_wave_1d -c 100 -t 10 -a 1
+./solver input.txt
 ```
+ The output will be the solution at each time step, printed to the console.
 
-## Architecture
+## Build from source
+ Clone the repository and compile the code as described above.
 
-The project consists of the following key files and directories:
-
-* `src/wave_equation.c`: Implements the wave equation solver.
-* `src/utils.c`: Provides utility functions for numerical computations.
-* `src/test_wave_equation.c`: Contains unit tests for the wave equation solver.
-* `src/main.c`: Acts as the entry point for the solver.
-* `include/wave_equation.h`: Declares the public API for the wave equation solver.
-* `include/utils.h`: Declares the public API for the utility functions.
-
-## Testing
-
+## Run tests
+ The project includes a test suite in `test.c`. Run the tests with:
 ```bash
-# Run the unit tests
-make test
+gcc -o test test.c
+./test
 ```
-
-## Contributing
-
-1. Fork the repository.
-2. Create a feature branch.
-3. Commit changes.
-4. Push and open a pull request.
+## Project structure
+* `solver.c`: numerical solver implementation
+* `input.txt`: example input file
+* `test.c`: test suite
+* `Makefile`: build script
+* `README.md`: this file
 
 ## License
+ Copyright (c) 2026 SamyAlderson
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-solver_equation_wave_1d is released under the MIT License.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
